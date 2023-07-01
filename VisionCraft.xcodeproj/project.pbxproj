@@ -28,6 +28,10 @@
 		FA7A5D322A4FB561006675A4 /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A5D302A4FB560006675A4 /* progress.png */; };
 		FA7A5D342A4FB8D6006675A4 /* oak_planks.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A5D332A4FB8D6006675A4 /* oak_planks.png */; };
 		FA7A5D352A4FB8D6006675A4 /* oak_planks.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A5D332A4FB8D6006675A4 /* oak_planks.png */; };
+		FA7A5D372A4FC8EE006675A4 /* VisionCraftWorldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A5D362A4FC8EE006675A4 /* VisionCraftWorldModel.swift */; };
+		FA7A5D382A4FC8EE006675A4 /* VisionCraftWorldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A5D362A4FC8EE006675A4 /* VisionCraftWorldModel.swift */; };
+		FA7A5D3A2A4FD2D0006675A4 /* progress 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A5D392A4FD2D0006675A4 /* progress 2.png */; };
+		FA7A5D3B2A4FD2D0006675A4 /* progress 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7A5D392A4FD2D0006675A4 /* progress 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 		FA7A5D2C2A4FB123006675A4 /* grass_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass_top.png; sourceTree = "<group>"; };
 		FA7A5D302A4FB560006675A4 /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
 		FA7A5D332A4FB8D6006675A4 /* oak_planks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oak_planks.png; sourceTree = "<group>"; };
+		FA7A5D362A4FC8EE006675A4 /* VisionCraftWorldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCraftWorldModel.swift; sourceTree = "<group>"; };
+		FA7A5D392A4FD2D0006675A4 /* progress 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progress 2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				FA6B8D272A4F40A5008DBAB1 /* Packages */,
 				FA6B8D3F2A4F40A7008DBAB1 /* VisionCraftTests */,
 				FA7A5D302A4FB560006675A4 /* progress.png */,
+				FA7A5D392A4FD2D0006675A4 /* progress 2.png */,
 				FA6B8D252A4F40A5008DBAB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 				FA6B8D2B2A4F40A5008DBAB1 /* VisionCraftApp.swift */,
 				FA6B8D2D2A4F40A5008DBAB1 /* ContentView.swift */,
 				FA6B8D2F2A4F40A5008DBAB1 /* ImmersiveView.swift */,
+				FA7A5D362A4FC8EE006675A4 /* VisionCraftWorldModel.swift */,
 				FA6B8D332A4F40A6008DBAB1 /* Assets.xcassets */,
 				FA6B8D352A4F40A6008DBAB1 /* Preview Content */,
 			);
@@ -241,6 +249,7 @@
 				FA7A5D272A4FACC7006675A4 /* dirt.png in Resources */,
 				FA7A5D2A2A4FAD1E006675A4 /* cobblestone.png in Resources */,
 				FA7A5D2D2A4FB124006675A4 /* grass_top.png in Resources */,
+				FA7A5D3A2A4FD2D0006675A4 /* progress 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7A5D322A4FB561006675A4 /* progress.png in Resources */,
+				FA7A5D3B2A4FD2D0006675A4 /* progress 2.png in Resources */,
 				FA7A5D1F2A4FA3E9006675A4 /* grass.usdz in Resources */,
 				FA7A5D352A4FB8D6006675A4 /* oak_planks.png in Resources */,
 				FA7A5D282A4FACC7006675A4 /* dirt.png in Resources */,
@@ -268,6 +278,7 @@
 				FA6B8D2E2A4F40A5008DBAB1 /* ContentView.swift in Sources */,
 				FA6B8D2C2A4F40A5008DBAB1 /* VisionCraftApp.swift in Sources */,
 				FA6B8D302A4F40A5008DBAB1 /* ImmersiveView.swift in Sources */,
+				FA7A5D372A4FC8EE006675A4 /* VisionCraftWorldModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6B8D412A4F40A7008DBAB1 /* VisionCraftTests.swift in Sources */,
+				FA7A5D382A4FC8EE006675A4 /* VisionCraftWorldModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

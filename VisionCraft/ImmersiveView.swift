@@ -11,20 +11,43 @@ import RealityKitContent
 import UIKit
 
 struct ImmersiveView: View {
+    
+    @ObservedObject var worldModel: VisionCraftWorld = VisionCraftWorld()
+    
     var body: some View {
         RealityView { content in
+            for x in 0..<worldModel.dimensions {
+                for y in 0..<worldModel.dimensions {
+                    for z in 0..<worldModel.dimensions {
+                        let block = worldModel.world[x][y][z]
+                        // Perform operations with the block value
+                    
+                        if block == 1 {
+                            if let cubeEntity = createGrassBlock() {
+                                content.add(cubeEntity)
+                                cubeEntity.position.x += 0.2*Float(x) // Adjust the x-position of the grass block
+                                cubeEntity.position.y += 0.2*Float(y) - 0.2 // Adjust the y-position of the grass block
+                                cubeEntity.position.z += 0.2*Float(z) // Adjust the z-position of the grass block
+                            }
+                        } else if block == 2 {
+                            if let cubeEntity = createWoodenPlankBlock() {
+                                content.add(cubeEntity)
+                                cubeEntity.position.x += 0.2*Float(x) // Adjust the x-position of the grass block
+                                cubeEntity.position.y += 0.2*Float(y) - 0.2 // Adjust the y-position of the grass block
+                                cubeEntity.position.z += 0.2*Float(z) // Adjust the z-position of the grass block
+                            }
+                        }
+                    }
+                }
+            }
             
-            if let cubeEntity = createGrassBlock() {
-                content.add(cubeEntity)
-                cubeEntity.position.x -= 0.3 // Adjust the x-position of the grass block
-            }
-            if let cubeEntity = createCobblestoneBlock() {
-                content.add(cubeEntity)
-            }
-            if let woodenPlank = createWoodenPlankBlock() {
-                content.add(woodenPlank)
-                woodenPlank.position.x += 0.3
-            }
+//            if let cubeEntity = createCobblestoneBlock() {
+//                content.add(cubeEntity)
+//            }
+//            if let woodenPlank = createWoodenPlankBlock() {
+//                content.add(woodenPlank)
+//                woodenPlank.position.x += 0.3
+//            }
             
         }
     }
