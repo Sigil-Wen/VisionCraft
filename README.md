@@ -2,3 +2,6 @@
 
 # VisionCraft
  Minecraft Clone in Apple Vision Pro
+
+ ![VisionCraft Homescreen Progress](progress.png)
+
