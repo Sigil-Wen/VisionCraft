@@ -14,13 +14,17 @@ struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
             
-                if let cubeEntity = createGrassBlock() {
-                    content.add(cubeEntity)
-                    cubeEntity.position.x -= 0.3 // Adjust the x-position of the grass block
-                }
-                if let cubeEntity = createCobblestoneBlock() {
-                    content.add(cubeEntity)
-                }
+            if let cubeEntity = createGrassBlock() {
+                content.add(cubeEntity)
+                cubeEntity.position.x -= 0.3 // Adjust the x-position of the grass block
+            }
+            if let cubeEntity = createCobblestoneBlock() {
+                content.add(cubeEntity)
+            }
+            if let woodenPlank = createWoodenPlankBlock() {
+                content.add(woodenPlank)
+                woodenPlank.position.x += 0.3
+            }
             
         }
     }
@@ -71,6 +75,26 @@ struct ImmersiveView: View {
         
         cubeEntity.model?.materials = [cobblestone, cobblestone, cobblestone, cobblestone, cobblestone, cobblestone]
         
+        return cubeEntity
+    }
+    
+    func createWoodenPlankBlock() -> ModelEntity? {
+        let cubeMesh = MeshResource.generateBox(width: 0.2, height: 0.2, depth: 0.2, splitFaces: true)
+        
+        var woodenPlank = SimpleMaterial()
+
+        do {
+            let woodenPlankTexture = try TextureResource.load(named: "oak_planks.png")
+            woodenPlank.baseColor = MaterialColorParameter.texture(woodenPlankTexture)
+        } catch {
+            print("Failed to load texture:", error)
+            return nil
+        }
+
+        let cubeEntity = ModelEntity(mesh: cubeMesh)
+
+        cubeEntity.model?.materials = [woodenPlank, woodenPlank, woodenPlank, woodenPlank, woodenPlank, woodenPlank]
+
         return cubeEntity
     }
 
