@@ -5,5 +5,7 @@
 
  ![VisionCraft Homescreen Progress](progress.png)
  ![VisionCraft Homescreen Progress 2](progress%202.png)
+ ![VisionCraft Homescreen Progress 3](progress%203.png)
+
 
 
