@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0692B22A5B1EDB00DA51B5 /* BackgroundField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0692B12A5B1EDB00DA51B5 /* BackgroundField.swift */; };
+		FA0692B42A5B29F900DA51B5 /* Screenshot 2023-07-09 at 1.46.15 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0692B32A5B29F900DA51B5 /* Screenshot 2023-07-09 at 1.46.15 PM.png */; };
 		FA6B8D2A2A4F40A5008DBAB1 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = FA6B8D292A4F40A5008DBAB1 /* RealityKitContent */; };
 		FA6B8D2C2A4F40A5008DBAB1 /* VisionCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B8D2B2A4F40A5008DBAB1 /* VisionCraftApp.swift */; };
 		FA6B8D2E2A4F40A5008DBAB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B8D2D2A4F40A5008DBAB1 /* ContentView.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0692B12A5B1EDB00DA51B5 /* BackgroundField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundField.swift; sourceTree = "<group>"; };
+		FA0692B32A5B29F900DA51B5 /* Screenshot 2023-07-09 at 1.46.15 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2023-07-09 at 1.46.15 PM.png"; sourceTree = "<group>"; };
 		FA6B8D242A4F40A5008DBAB1 /* VisionCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6B8D282A4F40A5008DBAB1 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		FA6B8D2B2A4F40A5008DBAB1 /* VisionCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionCraftApp.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				FA6B8D3F2A4F40A7008DBAB1 /* VisionCraftTests */,
 				FA7A5D302A4FB560006675A4 /* progress.png */,
 				FA7A5D392A4FD2D0006675A4 /* progress 2.png */,
+				FA0692B32A5B29F900DA51B5 /* Screenshot 2023-07-09 at 1.46.15 PM.png */,
 				FA6B8D252A4F40A5008DBAB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 				FA7A5D2F2A4FB35C006675A4 /* Assets */,
 				FA6B8D2B2A4F40A5008DBAB1 /* VisionCraftApp.swift */,
 				FA6B8D2D2A4F40A5008DBAB1 /* ContentView.swift */,
+				FA0692B12A5B1EDB00DA51B5 /* BackgroundField.swift */,
 				FA6B8D2F2A4F40A5008DBAB1 /* ImmersiveView.swift */,
 				FA7A5D362A4FC8EE006675A4 /* VisionCraftWorldModel.swift */,
 				FA6B8D332A4F40A6008DBAB1 /* Assets.xcassets */,
@@ -247,6 +253,7 @@
 				FA7A5D242A4FACAF006675A4 /* grass_block_side.png in Resources */,
 				FA7A5D312A4FB561006675A4 /* progress.png in Resources */,
 				FA7A5D272A4FACC7006675A4 /* dirt.png in Resources */,
+				FA0692B42A5B29F900DA51B5 /* Screenshot 2023-07-09 at 1.46.15 PM.png in Resources */,
 				FA7A5D2A2A4FAD1E006675A4 /* cobblestone.png in Resources */,
 				FA7A5D2D2A4FB124006675A4 /* grass_top.png in Resources */,
 				FA7A5D3A2A4FD2D0006675A4 /* progress 2.png in Resources */,
@@ -277,6 +284,7 @@
 			files = (
 				FA6B8D2E2A4F40A5008DBAB1 /* ContentView.swift in Sources */,
 				FA6B8D2C2A4F40A5008DBAB1 /* VisionCraftApp.swift in Sources */,
+				FA0692B22A5B1EDB00DA51B5 /* BackgroundField.swift in Sources */,
 				FA6B8D302A4F40A5008DBAB1 /* ImmersiveView.swift in Sources */,
 				FA7A5D372A4FC8EE006675A4 /* VisionCraftWorldModel.swift in Sources */,
 			);

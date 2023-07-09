@@ -15,49 +15,59 @@ struct ImmersiveView: View {
     @ObservedObject var worldModel: VisionCraftWorld = VisionCraftWorld()
     
     var body: some View {
-        RealityView { content in
-            for x in 0..<worldModel.dimensions {
-                for y in 0..<worldModel.dimensions {
-                    for z in 0..<worldModel.dimensions {
-                        let block = worldModel.world[x][y][z]
-                        // Perform operations with the block value
-                    
-                        if block == 1 {
-                            if let cubeEntity = createGrassBlock() {
-                                content.add(cubeEntity)
-                                cubeEntity.position.x += 0.2*Float(x) // Adjust the x-position of the grass block
-                                cubeEntity.position.y += 0.2*Float(y) - 0.2 // Adjust the y-position of the grass block
-                                cubeEntity.position.z += 0.2*Float(z) // Adjust the z-position of the grass block
-                            }
-                        } else if block == 2 {
-                            if let cubeEntity = createWoodenPlankBlock() {
-                                content.add(cubeEntity)
-                                cubeEntity.position.x += 0.2*Float(x) // Adjust the x-position of the grass block
-                                cubeEntity.position.y += 0.2*Float(y) - 0.2 // Adjust the y-position of the grass block
-                                cubeEntity.position.z += 0.2*Float(z) // Adjust the z-position of the grass block
+        ZStack {
+            RealityView { content in
+                
+                Text("BALLING").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                for x in 0..<worldModel.dimensions {
+                    for y in 0..<worldModel.dimensions {
+                        for z in 0..<worldModel.dimensions {
+                            let block = worldModel.world[x][y][z]
+                            // Perform operations with the block value
+                            if block == 1 {
+                                if let cubeEntity = createGrassBlock() {
+                                    content.add(cubeEntity)
+                                    cubeEntity.position.x += 0.2*Float(x) // Adjust the x-position of the grass block
+                                    cubeEntity.position.y += 0.2*Float(y) - 0.2 // Adjust the y-position of the grass block
+                                    cubeEntity.position.z += 0.2*Float(z) // Adjust the z-position of the grass block
+                                }
+                            } else if block == 2 {
+                                if let cubeEntity = createWoodenPlankBlock() {
+                                    content.add(cubeEntity)
+                                    cubeEntity.position.x += 0.2*Float(x) // Adjust the x-position of the grass block
+                                    cubeEntity.position.y += 0.2*Float(y) - 0.2 // Adjust the y-position of the grass block
+                                    cubeEntity.position.z += 0.2*Float(z) // Adjust the z-position of the grass block
+                                }
                             }
                         }
                     }
                 }
-            }
+                
+                //            if let cubeEntity = createCobblestoneBlock() {
+                //                content.add(cubeEntity)
+                //            }
+                //            if let woodenPlank = createWoodenPlankBlock() {
+                //                content.add(woodenPlank)
+                //                woodenPlank.position.x += 0.3
+                //            }
+                
+                
+            } update: {content in
+                
+            }.gesture(TapGesture().targetedToAnyEntity().onEnded {value in
+                print("TAPPED \(value.entity)")
+            })
             
-//            if let cubeEntity = createCobblestoneBlock() {
-//                content.add(cubeEntity)
-//            }
-//            if let woodenPlank = createWoodenPlankBlock() {
-//                content.add(woodenPlank)
-//                woodenPlank.position.x += 0.3
-//            }
-            
+            BackgroundField()
         }
     }
     
     func createGrassBlock() -> ModelEntity? {
         let cubeMesh = MeshResource.generateBox(width: 0.2, height: 0.2, depth: 0.2, splitFaces: true)
         
-        var grassSide = SimpleMaterial()
-        var dirt = SimpleMaterial()
-        var grassTop = SimpleMaterial()
+        var grassSide = UnlitMaterial()
+        var dirt = UnlitMaterial()
+        var grassTop = UnlitMaterial()
         
         do {
             let grassTexture = try TextureResource.load(named: "grass_block_side.png")
@@ -84,7 +94,7 @@ struct ImmersiveView: View {
     func createCobblestoneBlock() -> ModelEntity? {
         let cubeMesh = MeshResource.generateBox(width: 0.2, height: 0.2, depth: 0.2, splitFaces: true)
         
-        var cobblestone = SimpleMaterial()
+        var cobblestone = UnlitMaterial()
         
         do {
             let cobblestoneTexture = try TextureResource.load(named: "cobblestone.png")
@@ -104,7 +114,7 @@ struct ImmersiveView: View {
     func createWoodenPlankBlock() -> ModelEntity? {
         let cubeMesh = MeshResource.generateBox(width: 0.2, height: 0.2, depth: 0.2, splitFaces: true)
         
-        var woodenPlank = SimpleMaterial()
+        var woodenPlank = UnlitMaterial()
 
         do {
             let woodenPlankTexture = try TextureResource.load(named: "oak_planks.png")

@@ -23,6 +23,7 @@ struct ContentView: View {
                     
                     Toggle("Begin", isOn: $showImmersiveSpace)
                         .toggleStyle(.button)
+                        .glassBackgroundEffect()
                         .padding(.top, 50)
                 }
                 

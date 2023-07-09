@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct VisionCraftApp: App {
+    
+    @State private var worldImmersionStyle: ImmersionStyle = .full
+
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -16,6 +19,6 @@ struct VisionCraftApp: App {
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
-        }.immersionStyle(selection: .constant(.full), in: .full)
+        }.immersionStyle(selection: $worldImmersionStyle, in: .full)
     }
 }
